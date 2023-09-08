@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
+  // selector: '[app-servers]',
+  // selector: '.app-servers',
   selector: 'app-servers',
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.sass'],
+  styleUrls: ['./servers.component.scss'],
 })
 export class ServersComponent {
   @Input() name: string | undefined;
