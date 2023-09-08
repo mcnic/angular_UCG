@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   // selector: '[app-servers]',
@@ -28,7 +27,7 @@ export class ServersComponent {
     this.servers.push(this.serverName);
   }
 
-  onUpdateServerName(event: Event) {
-    this.serverName = (<HTMLInputElement>event.target).value;
-  }
+  // onUpdateServerName(event: Event) {
+  //   this.serverName = (<HTMLInputElement>event.target).value;
+  // }
 }
