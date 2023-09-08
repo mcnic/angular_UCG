@@ -1,3 +1,15 @@
-h3 {
-  color: blue
-  }
+.server {
+  display: flex;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.online,
+.green {
+  background-color: green;
+}
+
+.offline,
+.red {
+  background-color: red;
+}

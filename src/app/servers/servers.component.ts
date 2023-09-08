@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   // selector: '[app-servers]',
@@ -9,4 +10,25 @@ import { Component, Input } from '@angular/core';
 })
 export class ServersComponent {
   @Input() name: string | undefined;
+  allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  serverName = '123';
+  serverCreated = false;
+  servers: string[] = ['myServer1', 'myServer2'];
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
+
+  onCreateServer() {
+    this.serverCreated = true;
+    this.serverCreationStatus = `Server ${this.serverName} was Created!`;
+    this.servers.push(this.serverName);
+  }
+
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
 }

@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./server.component.scss'],
 })
 export class ServerComponent {
-  a = 'A';
+  serverId: number = 10;
+  serverStatus: string = 'offline';
+
+  constructor() {
+    this.serverStatus = Math.random() >= 0.5 ? 'online' : 'offline';
+  }
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
+
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
+  }
+
+  getClass() {
+    return this.serverStatus === 'online' ? 'online' : 'offline';
+  }
 }
