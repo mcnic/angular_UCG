@@ -8,8 +8,8 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class ShoppingListComponent implements OnInit {
   @Input('ingredientAdded') onAddIngredient: Ingredient;
-  @Input('ingredientRemove') onRemoveIngredient: any;
-  @Input('ingredientsCleared') onClearIngredient: any;
+  @Input('ingredientRemove') onRemoveIngredient: void;
+  @Input('ingredientsCleared') onClearIngredient: void;
 
   ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),

@@ -6,8 +6,15 @@
       (ingredientsCleared)="onClearIngredients()"
     />
     <hr />
-    <div class="list-group" *ngFor="let ingredient of ingredients">
-      <a href="#" class="list-group-item" style="cursor: pointer">
+    <div
+      class="list-group"
+      *ngFor="let ingredient of ingredients; let i = index"
+    >
+      <a
+        href="#"
+        appHighlight
+        [ngClass]="{ 'list-group-item': true, highlight: i % 2 === 0 }"
+      >
         {{ ingredient.name }} ({{ ingredient.amount }})
       </a>
     </div>
